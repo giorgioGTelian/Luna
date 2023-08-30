@@ -56,10 +56,11 @@ se ( person :: is_developer) {
  
 ```
 ## Roadmap
- Implement basic I/O functions
- Design and implement the standard library
- Optimize the compiler for better performance
- Extend platform support
+ Implement basic I/O functions <br>
+ Design and implement the standard library <br>
+ Optimize the compiler for better performance <br>
+ Extend platform support <br>
+ write the compiler <br>
 ## License
 Luna is open source and licensed under the MIT License.
 
