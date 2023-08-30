@@ -7,15 +7,14 @@ Performance: Luna is designed with performance in mind, allowing you to write ef
 Cross-Platform: Write once, run anywhere. Luna is compatible with major platforms.
 Strongly Typed: Catch errors before they become bugs with Luna's robust type system.
 Extensible: Easily integrate Luna with other systems and languages.
-Quick Start
-luna
-Copy code
-print("Hello, Luna!")
-To run a Luna program:
+
+## Quick Start
+```print("Hello, Luna!")```
+### To run a Luna program:
 
 bash
-Copy code
 $ luna run my_program.luna
+
 ## Installation
 TBD: Installation instructions go here.
 
