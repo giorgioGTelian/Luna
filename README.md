@@ -13,7 +13,7 @@ Extensible: Easily integrate Luna with other systems and languages.
 ### To run a Luna program:
 
 bash
-$ luna run my_program.luna
+```$ luna run my_program.luna```
 
 ## Installation
 TBD: Installation instructions go here.
