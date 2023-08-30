@@ -5,11 +5,11 @@ Welcome to Luna, the programming language of the future! Luna aims to bring simp
  </p>
 
 ## Features
-Elegant Syntax: Write clean and understandable code with Luna's intuitive syntax.
-Performance: Luna is designed with performance in mind, allowing you to write efficient applications.
-Cross-Platform: Write once, run anywhere. Luna is compatible with major platforms.
-Strongly Typed: Catch errors before they become bugs with Luna's robust type system.
-Extensible: Easily integrate Luna with other systems and languages.
+Elegant Syntax: Write clean and understandable code with Luna's intuitive syntax. <br>
+Performance: Luna is designed with performance in mind, allowing you to write efficient applications.<br>
+Cross-Platform: Write once, run anywhere. Luna is compatible with major platforms.<br>
+Strongly Typed: Catch errors before they become bugs with Luna's robust type system.<br>
+Extensible: Easily integrate Luna with other systems and languages.<br>
 
 ## Quick Start
 ```print("Hello, Luna!")```
