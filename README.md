@@ -12,7 +12,7 @@ Welcome to Luna, the programming language of the future! Luna aims to bring simp
 <strong>Extensible:</strong>  Easily integrate Luna with other systems and languages.<br>
 
 ## Quick Start
-```print("Hello, Luna!")```
+```stampa("Hello, Luna!")```
 ### To run a Luna program:
 
 bash  <br>
