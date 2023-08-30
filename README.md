@@ -12,7 +12,7 @@ Extensible: Easily integrate Luna with other systems and languages.
 ```print("Hello, Luna!")```
 ### To run a Luna program:
 
-bash  
+bash  <br>
 ```$ luna run my_program.luna```
 
 ## Installation
