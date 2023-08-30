@@ -27,6 +27,34 @@ Dive deep into Luna's features, syntax, and standard library by visiting our off
 ## Contributing
 We welcome contributions from the community! Check out our contribution guidelines to get started.
 
+## example
+```
+struttura Person {
+    argomento name
+    argomento experience
+    argomento is_developer }
+fine entita;
+
+inserisci your_name;
+inserisci your_experience_in_years;
+inserisci do_you_like_programming;
+
+person = nuova Person [your_name your_experience_in_years do_you_like_programming == "si"];
+stampa person;
+
+se ( person :: is_developer) {
+
+    person_name = person :: name;
+    stampa "hey " + person_name + "!";
+
+    experience = person :: experience
+
+   } se (experience > 0)  {
+        started_in = 2022 - experience;
+        stampa "you had started your career in " + started_in;
+}
+ 
+```
 ## Roadmap
  Implement basic I/O functions
  Design and implement the standard library
