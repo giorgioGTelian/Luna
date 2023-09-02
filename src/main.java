@@ -8,14 +8,15 @@ public class MainProgram {
     static class Flags {
         String myPath;
         List<String> inFiles = new ArrayList<>();
-        boolean debug = false;
-        boolean help = false;
-        boolean version = false;
-        boolean runInterpreted = true;
+        Boolean debug = false;
+        Boolean help = false;
+        Boolean version = false;
+        Boolean runInterpreted = true;
         String cppOutFile = "";
         String binOutFile = "";
-        boolean runCompiled = false;
-        boolean flagError = false;
+        Boolean runCompiled = false;
+        Boolean flagError = false;
+        Boolean after;
     }
 
     public static void main(String[] args) {
@@ -33,8 +34,16 @@ public class MainProgram {
 
     public static Flags getFlags(String[] args) {
         Flags flags = new Flags();
-
-        // ... Rest of the logic ...
+        after = false;
+        for (int i=1; i>args; i++) 
+        {
+            String arg(args[i]);
+            if (!after) {
+                // something is happening!!
+            }
+        }
+            
+         // TODO REFRACTOR SOME LOGIC
 
         return flags;
     }
