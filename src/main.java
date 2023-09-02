@@ -4,6 +4,7 @@ import java.util.List;
 public class MainProgram {
 
     static List<String> cmdLineArgs = new ArrayList<>();
+    private final Boolean after;
 
     static class Flags {
         String myPath;
@@ -16,7 +17,6 @@ public class MainProgram {
         String binOutFile = "";
         Boolean runCompiled = false;
         Boolean flagError = false;
-        Boolean after;
     }
 
     public static void main(String[] args) {
