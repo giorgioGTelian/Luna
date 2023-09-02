@@ -5,11 +5,12 @@ Welcome to Luna, the programming language of the future! Luna aims to bring simp
  </p>
 
 ## Features
-<strong>Elegant Syntax:</strong> Write clean and understandable code with Luna's intuitive syntax. <br>
-<strong>Performance:</strong>  Luna is designed with performance in mind, allowing you to write efficient applications.<br>
-<strong>Cross-Platform:</strong>  Write once, run anywhere. Luna is compatible with major platforms.<br>
-<strong>Strongly Typed:</strong>  Catch errors before they become bugs with Luna's robust type system.<br>
-<strong>Extensible:</strong>  Easily integrate Luna with other systems and languages.<br>
+* <strong>Elegant Syntax:</strong> Write clean and understandable code with Luna's intuitive syntax. it will resample the italian language <br>
+* <strong>Performance:</strong>  Luna is designed with performance in mind, allowing you to write efficient applications.<br>
+* <strong>Cross-Platform:</strong>  Write once, run anywhere. Luna is compatible with major platforms.<br>
+* <strong>Strongly Typed:</strong>  Catch errors before they become bugs with Luna's robust type system.<br>
+* <strong>Extensible:</strong>  Easily integrate Luna with other systems and languages.<br>
+* <strong>Imperative Paradigm:</strong>Luna follows an imperative programming style, making it intuitive for developers familiar with languages like C, Java, and Python.<br>
 
 ## Quick Start
 ```stampa("Hello, Luna!")```
@@ -55,12 +56,12 @@ se ( person :: is_developer) {
 }
  
 ```
-## Roadmap
- Implement basic I/O functions <br>
- Design and implement the standard library <br>
- Optimize the compiler for better performance <br>
- Extend platform support <br>
- write the compiler <br>
+## Roadmap updated to 02/09/2023
+ + Implement basic I/O functions <br>
+ + Design and implement the standard library <br>
+ + Optimize the compiler for better performance <br>
+ + Extend platform support <br>
+ +  Write the Luna compiler using Java and integrate testing with Maven. <br>
 ## License
 Luna is open source and licensed under the MIT License.
 
