@@ -56,12 +56,13 @@ se ( person :: is_developer) {
 }
  
 ```
-## Roadmap updated to 02/09/2023
+## Roadmap updated to 09/09/2023
  + Implement basic I/O functions <br>
  + Design and implement the standard library <br>
  + Optimize the compiler for better performance <br>
  + Extend platform support <br>
  +  Write the Luna compiler using Java and integrate testing with Maven. <br>
+ + started writing the parser <br>
 ## License
 Luna is open source and licensed under the MIT License.
 
