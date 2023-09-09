@@ -17,7 +17,7 @@ Welcome to Luna, the programming language of the future! Luna aims to bring simp
 ### To run a Luna program:
 
 bash  <br>
-```$ luna run my_program.luna```
+```$ luna bark my_program.luna```
 
 ## Installation
 TBD: Installation instructions go here.
