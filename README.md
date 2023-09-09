@@ -5,12 +5,12 @@ Welcome to Luna, the programming language of the future! Luna aims to bring simp
  </p>
 
 ## Features
-* <strong>Elegant Syntax:</strong> Write clean and understandable code with Luna's intuitive syntax. it will resample the italian language <br>
-* <strong>Performance:</strong>  Luna is designed with performance in mind, allowing you to write efficient applications.<br>
-* <strong>Cross-Platform:</strong>  Write once, run anywhere. Luna is compatible with major platforms.<br>
-* <strong>Strongly Typed:</strong>  Catch errors before they become bugs with Luna's robust type system.<br>
-* <strong>Extensible:</strong>  Easily integrate Luna with other systems and languages.<br>
-* <strong>Imperative Paradigm:</strong>Luna follows an imperative programming style, making it intuitive for developers familiar with languages like C, Java, and Python.<br>
+* <strong>Elegant Syntax:</strong> <br> Write clean and understandable code with Luna's intuitive syntax. it will resample the italian language <br>
+* <strong>Performance:</strong> <br> Luna is designed with performance in mind, allowing you to write efficient applications.<br>
+* <strong>Cross-Platform:</strong> <br> Write once, run anywhere. Luna is compatible with major platforms.<br>
+* <strong>Strongly Typed:</strong> <br> Catch errors before they become bugs with Luna's robust type system.<br>
+* <strong>Extensible:</strong> <br> Easily integrate Luna with other systems and languages.<br>
+* <strong>Imperative Paradigm:</strong> <br> Luna follows an imperative programming style, making it intuitive for developers familiar with languages like C, Java, and Python.<br>
 
 ## Quick Start
 ```stampa("Hello, Luna!")```
