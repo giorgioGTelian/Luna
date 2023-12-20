@@ -1,5 +1,5 @@
 # Luna Programming Language 🌙
-Welcome to Luna, the programming language of the future! Luna aims to bring simplicity, elegance, and performance to developers across the globe. Whether you're building a simple script or a complex system, Luna is here to light your path.
+Welcome to Luna, the programming language of the future! Luna aims to bring simplicity, elegance, and performance to developers across the globe.<br> Whether you're building a simple script or a complex system, Luna is here to light your path.
 <p align="center">
 <img align="center" alt="img" src="luna.png"/>
  </p>
