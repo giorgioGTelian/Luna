@@ -64,5 +64,5 @@ se ( person :: is_developer) {
  +  Write the Luna compiler using Java and integrate testing with Maven. <br>
  + started writing the parser <br>
 ## License
-Luna is open source and licensed under the MIT License.
+Luna is open source and licensed under the <a href="https://www.gnu.org/licenses/old-licenses/gpl-2.0.html"> GNU license </a>.
 
