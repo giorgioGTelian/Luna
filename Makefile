@@ -1,4 +1,5 @@
-# I'm totally aware how shitty this makefile is
+# for c++ LLVM copiler
+# I'm totally aware how shitty this makefile is 
 # I use the IDE Code::Blocks; this is only for people who don't have that
 # I'll write a proper makefile at some point
 
