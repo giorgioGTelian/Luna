@@ -1,16 +1,19 @@
-# processor.py
+from parser import parse
+from utils import generate_assembly
 
-from utils import table_string_from_tokens, string_from_tokens
+def process_file(file_path):
+    """Reads the source file, tokenizes it, parses it, and generates assembly."""
+    with open(file_path, 'r') as file:
+        source_code = file.read()
 
-def process_tokens(tokens, left, right):
-    """
-    Process a range of tokens and return a formatted string.
-    """
-    return string_from_tokens(tokens, left, right)
+    # Step 1: Parse the source code to generate AST
+    ast = parse(source_code)
 
+    # Step 2: Generate assembly code from the AST
+    assembly_code = generate_assembly(ast)
 
-def create_token_table(tokens, table_name="Tokens Table"):
-    """
-    Create a formatted table of tokens for output.
-    """
-    return table_string_from_tokens(tokens, table_name)
+    # Step 3: Write the assembly code to an output file
+    with open("output.asm", 'w') as out_file:
+        out_file.write(assembly_code)
+
+    print("Assembly code successfully generated in output.asm")
