@@ -1,37 +1,18 @@
-# utils.py
+def generate_assembly(ast):
+    """Generate x86 assembly code from the given AST."""
+    assembly_lines = []
+    
+    # Simple example for generating assembly from a structure
+    for node in ast:
+        if node['type'] == 'struct':
+            assembly_lines.append(f"; Structure: {node['name']}")
+            for field in node['fields']:
+                assembly_lines.append(f"    {field}: db 0")
+        elif node['type'] == 'print':
+            assembly_lines.append(f"    ; Print {node['message']}")
+            assembly_lines.append(f"    mov eax, {node['message']}")
+            assembly_lines.append(f"    call print")
 
-def table_string_from_tokens(tokens, table_name=""):
-    """
-    Generate a formatted table string from the list of tokens.
-    """
-    lines = []
-    abv, blw, current_line = "", "", ""
-    max_width = 240
-    separator = "    "
-
-    for i, token in enumerate(tokens):
-        if i > 0 and len(current_line) + len(separator) + len(token.Text) < max_width:
-            abv += separator
-            current_line += separator
-            blw += separator
-
-            abv += " " * len(token.Text)
-            blw += " " * len(token.Text)
-            current_line += token.Text
-        else:
-            if i > 0:
-                lines.extend([abv, current_line, blw, ""])
-                abv, blw = "", ""
-            abv += " " * len(token.Text)
-            blw += " " * len(token.Text)
-            current_line = token.Text
-
-    lines.extend([abv, current_line, blw])
-    return "\n".join(lines)
-
-
-def string_from_tokens(tokens, left, right):
-    """
-    Concatenate text from a list of tokens between specified indices.
-    """
-    return " ".join([tokens[i].Text for i in range(left, right + 1)])
+    # Add some minimal assembly header/footer
+    assembly_code = "\n".join(assembly_lines)
+    return assembly_code
