@@ -7,24 +7,28 @@ public class MainProgram
 
     public static void Main(string[] args)
     {
-        // Simulating argument handling
         if (args.Length == 0)
         {
-            Console.WriteLine("No arguments provided. Exiting...");
+            Console.WriteLine("No source file provided.");
             return;
         }
 
-        // Process arguments and call token or utility processing functions
-        Token token = new Token("example_token", 1, 1);
-        Console.WriteLine(token.GetDescription());
-
-        // Example of calling Python processing function
-        CallPythonProcessing();
+        // Call the Python-based processor to handle parsing and assembly code generation
+        string sourceFilePath = args[0];
+        CallPythonProcessor(sourceFilePath);
     }
 
-    static void CallPythonProcessing()
+    static void CallPythonProcessor(string sourceFilePath)
     {
-        var py = PythonEngine.ImportModule("processor");
-        py.Invoke("create_token_table", new object[] { /* Token data here */ });
+        try
+        {
+            // Using IronPython for embedding Python interpreter into C#
+            var py = PythonEngine.ImportModule("processor");
+            py.Invoke("process_file", new object[] { sourceFilePath });
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine("Error during processing: " + e.Message);
+        }
     }
 }
