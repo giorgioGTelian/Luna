@@ -61,7 +61,7 @@ se ( person :: is_developer) {
  + Design and implement the standard library <br>
  + Optimize the compiler for better performance <br>
  + Extend platform support <br>
- +  Write the Luna compiler using Java and integrate testing with Maven. <br>
+ +  Write the Luna compiler using c# and python and integrate testing with Maven. <br>
  + started writing the parser <br>
 ## License
 Luna is open source and licensed under the <a href="https://www.gnu.org/licenses/old-licenses/gpl-2.0.html"> GNU license </a>.
