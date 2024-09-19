@@ -1,56 +1,56 @@
-using System;
-using System.Collections.Generic;
+import re
 
-class ParseUtils
-{
-    public void LexString(SourceFile file, List<Token> tokens) { /* ... */ }
+# Token patterns for the custom language
+TOKENS = [
+    (r'struttura', 'STRUCT'),
+    (r'argomento', 'ARG'),
+    (r'inserisci', 'INPUT'),
+    (r'nuova', 'NEW'),
+    (r'stampa', 'PRINT'),
+    (r'se', 'IF'),
+    (r'fine entita;', 'END_STRUCT'),
+    (r'[a-zA-Z_]\w*', 'IDENTIFIER'),
+    (r'[0-9]+', 'NUMBER'),
+    (r'==', 'EQ'),
+    (r'\+', 'PLUS'),
+    (r'-', 'MINUS'),
+    (r'=', 'ASSIGN'),
+    (r'::', 'ACCESS'),
+    (r'\(', 'LPAREN'),
+    (r'\)', 'RPAREN'),
+    (r'{', 'LBRACE'),
+    (r'}', 'RBRACE'),
+]
 
-    public void ParseTokenList(List<Token> tokens, int left, int right, List<AstNode> nodes) { /* ... */ }
+def tokenize(code):
+    tokens = []
+    while code:
+        match = None
+        for token_regex, token_type in TOKENS:
+            regex = re.compile(token_regex)
+            match = regex.match(code)
+            if match:
+                tokens.append((match.group(0), token_type))
+                code = code[match.end():]
+                break
+        if not match:
+            raise SyntaxError(f"Unknown token in code: {code}")
+    return tokens
 
-    public int FindExpressionSplit(List<Token> tokens, int left, int right) { /* ... */ }
+def parse(code):
+    tokens = tokenize(code)
+    ast = []
+    current_struct = None
 
-    public AstNode ParseExpression(List<Token> tokens, int left, int right) { /* ... */ }
+    for token, token_type in tokens:
+        if token_type == 'STRUCT':
+            current_struct = {'type': 'struct', 'name': '', 'fields': []}
+            ast.append(current_struct)
+        elif token_type == 'ARG':
+            field_name = tokens[tokens.index((token, token_type)) + 1][0]
+            current_struct['fields'].append(field_name)
+        elif token_type == 'PRINT':
+            message = tokens[tokens.index((token, token_type)) + 1][0]
+            ast.append({'type': 'print', 'message': message})
 
-    public int SkipBrace(List<Token> tokens, int start) { /* ... */ }
-
-    public void ParseSequence(List<Token> tokens, int left, int right, Operator splitter, List<AstNode> outNodes) { /* ... */ }
-
-    public AstNode AstNodeFromTokens(List<Token> tokens, int left, int right)
-    {
-        List<AstNode> nodes = new List<AstNode>();
-        ParseTokenList(tokens, left, right, nodes);
-        if (nodes.Count == 0)
-        {
-            return AstVoid.Make();
-        }
-        else if (nodes.Count == 1)
-        {
-            return nodes[0];
-        }
-        else
-        {
-            return AstList.Make(nodes);
-        }
-    }
-
-    public AstType ParseType(List<Token> tokens, int left, int right)
-    {
-        List<AstTupleType.NamedType> types = new List<AstTupleType.NamedType>();
-        // ... rest of the logic ...
-        return new AstTupleType(types);
-    }
-
-    public void ImportFile(List<AstNode> nodes, string path) { /* ... */ }
-}
-
-class Token { /* ... */ }
-class AstNode { /* ... */ }
-class AstVoid : AstNode { /* ... */ }
-class AstList : AstNode { /* ... */ }
-class AstToken : AstNode { /* ... */ }
-class AstType : AstNode { /* ... */ }
-class AstTupleType : AstType { /* ... */ }
-class Operator { /* ... */ }
-class SourceFile { /* ... */ }
-
-// Other necessary classes and methods ...
+    return ast

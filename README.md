@@ -1,5 +1,5 @@
 # Luna Programming Language 🌙
-Welcome to Luna, the programming language of the future! Luna aims to bring simplicity, elegance, and performance to developers across the globe.<br> Whether you're building a simple script or a complex system, Luna is here to light your path.
+Welcome to Luna, the programming language of the future! Luna aims to bring simplicity, elegance, and performance to developers.<br> Whether you're building a simple script or a complex system, Luna is here to light your path.
 <p align="center">
 <img align="center" alt="img" src="luna.png"/>
  </p>
@@ -61,7 +61,7 @@ se ( person :: is_developer) {
  + Design and implement the standard library <br>
  + Optimize the compiler for better performance <br>
  + Extend platform support <br>
- +  Write the Luna compiler using Java and integrate testing with Maven. <br>
+ +  Write the Luna compiler using c# and python and integrate testing with Maven. <br>
  + started writing the parser <br>
 ## License
 Luna is open source and licensed under the <a href="https://www.gnu.org/licenses/old-licenses/gpl-2.0.html"> GNU license </a>.
